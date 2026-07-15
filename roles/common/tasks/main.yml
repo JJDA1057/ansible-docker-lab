@@ -1,0 +1,27 @@
+- name: Ensure the system is updated
+  dnf:
+    name: "*"
+    state: latest
+
+- name: Install base system packages
+  dnf:
+    name:
+      - vim
+      - git
+      - curl
+      - wget
+      - bash-completion
+      - procps-ng  
+    state: present
+
+- name: Configure timezone
+  timezone:
+    name: America/Bogota
+
+- name: Ensure the admin user exists (for security)
+  user:
+    name: admin
+    groups: wheel
+    append: yes
+    state: present
+    shell: /bin/bash

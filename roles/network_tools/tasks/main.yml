@@ -1,0 +1,8 @@
+---
+- name: Install network and system utilities
+  dnf:
+    name:
+      - iproute
+      - ncurses
+      - procps-ng
+    state: present

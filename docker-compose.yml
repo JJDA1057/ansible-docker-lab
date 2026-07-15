@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  head:
+    build: .                 
+    container_name: head
+    hostname: head
+    tty: true
+    cap_add:
+      - NET_ADMIN
+    networks:
+      red_privada:
+        ipv4_address: 10.150.0.10
+
+  node1:
+    build: .                
+    container_name: node1
+    hostname: node1
+    tty: true
+    networks:
+      red_privada:
+        ipv4_address: 10.150.0.11
+
+  node2: 
+    build: .                 
+    container_name: node2
+    hostname: node2
+    tty: true
+    networks:
+      red_privada:
+        ipv4_address: 10.150.0.12
+
+networks:
+  red_privada:
+    driver: bridge 
+    ipam: 
+      config:
+        - subnet: 10.150.0.0/24

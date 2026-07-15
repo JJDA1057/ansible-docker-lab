@@ -1,0 +1,8 @@
+---
+- name: Configure Laboratory Infrastructure
+  hosts: all
+  become: yes
+  roles:
+    - common           
+    - network_tools     
+    - ssh_keys
