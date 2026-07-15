@@ -8,8 +8,10 @@ A clean and modular lab environment to learn and practice infrastructure automat
 - SSH-based configuration automation.
 - Rocky Linux 8.5 containers.
 - Orchestration for clusters (Head and Worker nodes).
+```
 
 ## Quick Start
+
 1. Start the containers:
 ```bash
 docker compose up -d
