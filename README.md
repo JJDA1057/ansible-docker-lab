@@ -52,3 +52,6 @@ docker compose down
 docker compose build --no-cache
 docker compose up -d
 ansible-playbook -i inventory.ini site.yml
+```
+
+This project uses GitHub Actions to automate Continuous Integration (CI) tests, ensuring that the repository and its automation workflows remain functional after every change.
